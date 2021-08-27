@@ -20,8 +20,7 @@ UBUNTU_CODENAME=bionic
 
 # Librealsense Setup
 --> https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md
-
---> https://lieuzhenghong.com/how_to_install_librealsense_on_the_jetson_nx/
+\n--> https://lieuzhenghong.com/how_to_install_librealsense_on_the_jetson_nx/
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
 sudo apt-get install -y --no-install-recommends \
     python3 \
@@ -51,7 +50,7 @@ sudo apt-get install librealsense2-utils
 Apply the codes below
 > import sys
 > print(sys.path)
-Copy .so files of pyrealsense (librealsense/build/wrappers/python) to one of the displayed paths
+#Copy .so files of pyrealsense (librealsense/build/wrappers/python) to one of the displayed paths
 In some cases;
 > import pyrealsense2.pyrealsense2
 statement can be used
