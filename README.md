@@ -3,8 +3,8 @@ Recording high resolution image and IMU data using D435I and T265 cameras on NVI
 
 # System Requirements
 cat /etc/os-release
-&nbsp /*
-**Enter**NAME="Ubuntu"
+/*
+*Enter*NAME="Ubuntu"
 **Enter**VERSION="18.04.5 LTS (Bionic Beaver)"
 **Enter**ID=ubuntu
 **Enter**ID_LIKE=debian
