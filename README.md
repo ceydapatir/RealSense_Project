@@ -37,45 +37,44 @@ UBUNTU_CODENAME=bionic
 
 --> https://lieuzhenghong.com/how_to_install_librealsense_on_the_jetson_nx/
 
-sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
+> sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
 
-sudo apt-get install -y --no-install-recommends \
+> sudo apt-get install -y --no-install-recommends \
     python3 \
     python3-setuptools \
     python3-pip \
     python3-dev
 
-git clone https://github.com/IntelRealSense/librealsense.git
+> git clone https://github.com/IntelRealSense/librealsense.git
 
-cd librealsense/
+> cd librealsense/
 
+> sudo apt-get install git libssl-dev libusb-1.0-0-dev pkg-config libgtk-3-dev
 
-sudo apt-get install git libssl-dev libusb-1.0-0-dev pkg-config libgtk-3-dev
+> sudo apt-get install libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev at
 
-sudo apt-get install libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev at
+> ./scripts/setup_udev_rules.sh
 
-./scripts/setup_udev_rules.sh
+> mkdir build
 
-mkdir build
+> cd build
 
-cd build
+> cmake ../ -DBUILD_PYTHON_BINDINGS:bool=true
 
-cmake ../ -DBUILD_PYTHON_BINDINGS:bool=true
+> sudo make uninstall && sudo make clean && sudo make -j4 && sudo make install
 
-sudo make uninstall && sudo make clean && sudo make -j4 && sudo make install
-
-export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.6/pyrealsense2
+> export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.6/pyrealsense2
 
 # Realsense Viewer Setup
 --> https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md
 
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE || sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE
+> sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE || sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE
 
-sudo add-apt-repository "deb https://librealsense.intel.com/Debian/apt-repo $(lsb_release -cs) main" -u
+> sudo add-apt-repository "deb https://librealsense.intel.com/Debian/apt-repo $(lsb_release -cs) main" -u
 
-sudo apt-get install librealsense2-dkms
+> sudo apt-get install librealsense2-dkms
 
-sudo apt-get install librealsense2-utils
+> sudo apt-get install librealsense2-utils
 
 # Import pyrealsense2
 Apply the codes below
