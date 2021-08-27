@@ -1,5 +1,5 @@
 # RealSense_Project
-Recording high resolution image and IMU data using D435I and T265 cameras
+Recording high resolution image and IMU data using D435I and T265 cameras on NVIDIA JETSON NANO
 
 **System Requirements**
 cat /etc/os-release
