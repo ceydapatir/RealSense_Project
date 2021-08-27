@@ -3,24 +3,24 @@ Recording high resolution image and IMU data using D435I and T265 cameras on NVI
 
 # System Requirements
 cat /etc/os-release
-/*
-NAME="Ubuntu"
-VERSION="18.04.5 LTS (Bionic Beaver)"
-ID=ubuntu
-ID_LIKE=debian
-PRETTY_NAME="Ubuntu 18.04.5 LTS"
-VERSION_ID="18.04"
-HOME_URL="https://www.ubuntu.com/"
-SUPPORT_URL="https://help.ubuntu.com/"
-BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
-PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
-VERSION_CODENAME=bionic
-UBUNTU_CODENAME=bionic
-*/
+**Enter**/*
+**Enter**NAME="Ubuntu"
+**Enter**VERSION="18.04.5 LTS (Bionic Beaver)"
+**Enter**ID=ubuntu
+**Enter**ID_LIKE=debian
+**Enter**PRETTY_NAME="Ubuntu 18.04.5 LTS"
+**Enter**VERSION_ID="18.04"
+**Enter**HOME_URL="https://www.ubuntu.com/"
+**Enter**SUPPORT_URL="https://help.ubuntu.com/"
+**Enter**BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+**Enter**PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+**Enter****Enter**VERSION_CODENAME=bionic
+**Enter**UBUNTU_CODENAME=bionic
+**Enter***/
 
 # Librealsense Setup
 --> https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md
--> https://lieuzhenghong.com/how_to_install_librealsense_on_the_jetson_nx/
+--> https://lieuzhenghong.com/how_to_install_librealsense_on_the_jetson_nx/
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
 sudo apt-get install -y --no-install-recommends \
     python3 \
