@@ -83,8 +83,10 @@ Apply the codes below
 
 > print(sys.path)
 
-#Copy .so files of pyrealsense (librealsense/build/wrappers/python) to one of the displayed paths
+Copy .so files of pyrealsense (librealsense/build/wrappers/python) to one of the displayed paths
 
->>In some cases;
->> import pyrealsense2.pyrealsense2
->>statement can be used
+In some cases;
+
+> import pyrealsense2.pyrealsense2
+
+statement can be used
