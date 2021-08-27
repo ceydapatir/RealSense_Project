@@ -20,7 +20,7 @@ UBUNTU_CODENAME=bionic
 
 # Librealsense Setup
 --> https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md
-\n--> https://lieuzhenghong.com/how_to_install_librealsense_on_the_jetson_nx/
+-> https://lieuzhenghong.com/how_to_install_librealsense_on_the_jetson_nx/
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
 sudo apt-get install -y --no-install-recommends \
     python3 \
