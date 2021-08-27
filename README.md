@@ -2,6 +2,7 @@
 Recording high resolution image and IMU data using D435I and T265 cameras
 
 **System Requirements**
+
 cat /etc/os-release
 
 NAME="Ubuntu"
@@ -19,6 +20,7 @@ UBUNTU_CODENAME=bionic
 
 
 **Librealsense Setup**
+
 --> https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md
 --> https://lieuzhenghong.com/how_to_install_librealsense_on_the_jetson_nx/
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
@@ -39,6 +41,7 @@ sudo make uninstall && sudo make clean && sudo make -j4 && sudo make install
 export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.6/pyrealsense2
 
 **Realsense Viewer Setup**
+
 --> https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE || sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE
 sudo add-apt-repository "deb https://librealsense.intel.com/Debian/apt-repo $(lsb_release -cs) main" -u
@@ -46,10 +49,11 @@ sudo apt-get install librealsense2-dkms
 sudo apt-get install librealsense2-utils
 
 **Import pyrealsense2**
+
 Apply the codes below
->>> import sys
->>> print(sys.path)
+-> import sys
+-> import sys
 Copy .so files of pyrealsense (librealsense/build/wrappers/python) to one of the displayed paths
 In some cases;
->>> import pyrealsense2.pyrealsense2
+-> import sys
 statement can be used
