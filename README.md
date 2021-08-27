@@ -1,9 +1,9 @@
 # RealSense_Project
 Recording high resolution image and IMU data using D435I and T265 cameras
 
->System Requirements<
+**System Requirements**
 cat /etc/os-release
-/*
+
 NAME="Ubuntu"
 VERSION="18.04.5 LTS (Bionic Beaver)"
 ID=ubuntu
@@ -16,9 +16,9 @@ BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
 PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
 VERSION_CODENAME=bionic
 UBUNTU_CODENAME=bionic
-*/
 
->Librealsense Setup<
+
+**Librealsense Setup**
 --> https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md
 --> https://lieuzhenghong.com/how_to_install_librealsense_on_the_jetson_nx/
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
@@ -38,14 +38,14 @@ cmake ../ -DBUILD_PYTHON_BINDINGS:bool=true
 sudo make uninstall && sudo make clean && sudo make -j4 && sudo make install
 export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.6/pyrealsense2
 
->Realsense Viewer Setup<
+**Realsense Viewer Setup**
 --> https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE || sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE
 sudo add-apt-repository "deb https://librealsense.intel.com/Debian/apt-repo $(lsb_release -cs) main" -u
 sudo apt-get install librealsense2-dkms
 sudo apt-get install librealsense2-utils
 
->Import pyrealsense2<
+**Import pyrealsense2**
 Apply the codes below
 >>> import sys
 >>> print(sys.path)
