@@ -80,8 +80,11 @@ sudo apt-get install librealsense2-utils
 # Import pyrealsense2
 Apply the codes below
 > import sys
+
 > print(sys.path)
-<#Copy .so files of pyrealsense (librealsense/build/wrappers/python) to one of the displayed paths
-<In some cases;
-> import pyrealsense2.pyrealsense2
-<statement can be used
+
+#Copy .so files of pyrealsense (librealsense/build/wrappers/python) to one of the displayed paths
+
+>>In some cases;
+>> import pyrealsense2.pyrealsense2
+>>statement can be used
